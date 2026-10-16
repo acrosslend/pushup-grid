@@ -51,3 +51,4 @@ $('pushupBtn').addEventListener('click',async()=>{if(!mySlot||!roomId||nextIndex
 $('copyBtn').addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('shareLink').value);$('copyBtn').textContent='Скопировано!'}catch{$('shareLink').select();status('Ссылка выделена — скопируй её вручную.',true)}setTimeout(()=>$('copyBtn').textContent='Копировать ссылку',1500)});
 $('leaveBtn').addEventListener('click',()=>{cleanListeners();roomId=null;mySlot=0;location.href=location.pathname});ctx.fillStyle='#f8fafc';ctx.fillRect(0,0,SIZE,SIZE);const roomFromUrl=new URLSearchParams(location.search).get('room');if(roomFromUrl){$('roomInput').value=roomFromUrl;enterRoom(roomFromUrl).catch(e=>status(e.message||'Не удалось войти.'))}
 </script></body></html>
+
